@@ -1,0 +1,22 @@
+.album-cover {
+  height: 254px;
+  width: 254px;
+}
+
+h3.album-name {
+  margin-bottom: 10px;
+}
+
+h4.artist-name {
+  margin-top: 10px;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.album-info-body {
+  padding: 10px 40px;
+}

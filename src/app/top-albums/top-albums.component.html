@@ -1,6 +1,12 @@
-<p>top-albums works!</p>
-<ul>
+<div class="uk-margin">
+  <form class="uk-search uk-search-default">
+    <input class="uk-search-input" type="search" placeholder="Search">
+  </form>
+</div>
+
+
+<ul class="uk-grid-medium uk-child-width-1-2@l uk-grid" uk-grid>
   <li *ngFor="let album of albums">
-    {{ album.name }}
+    <app-album-list-item [album]="album"></app-album-list-item>
   </li>
 </ul>

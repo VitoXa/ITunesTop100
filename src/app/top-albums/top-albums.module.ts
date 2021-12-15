@@ -5,9 +5,10 @@ import { TopAlbumsComponent } from './top-albums.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { AlbumListItemComponent } from './album-list-item/album-list-item.component';
 
 @NgModule({
-  declarations: [TopAlbumsComponent],
+  declarations: [TopAlbumsComponent, AlbumListItemComponent],
   imports: [CommonModule, TopAlbumsRoutingModule, HttpClientModule],
   exports: [TopAlbumsComponent],
   providers: [TopAlbumsService],

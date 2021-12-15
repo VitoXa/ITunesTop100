@@ -1,0 +1,23 @@
+<div class="uk-card uk-card-default uk-grid uk-grid-collapse" uk-grid>
+  <div class="uk-width-auto uk-flex uk-flex-column uk-flex-center">
+    <img class="album-cover" [src]="album.imgBigger.src" alt="albums cover">
+  </div>
+  <div class="uk-width-expand uk-card uk-flex uk-flex-column uk-flex-between">
+    <div class="uk-card-header">
+      <h3 class="uk-card-title album-name">{{album.name}}</h3>
+      <h4 class="artist-name">{{ album.artist.label}}</h4>
+    </div>
+    <div class="uk-card-body album-info-body">
+      <p class="uk-text-meta uk-margin-remove-top">
+        <span>{{ album.tracksCount }} tracks</span>
+        <span> · </span>
+        <span>{{album.category.label}}</span>
+        <span> · </span>
+        <time [attr.datetime]="album.releaseDate.toString()">{{album.releaseDate | date:'yyyy'}}</time>
+      </p>
+    </div>
+    <div class="uk-card-footer">
+      <a [href]="album.link" target="_blank" class="uk-button uk-button-text uk-align-right">{{ album.price }} on apple music</a>
+    </div>
+  </div>
+</div>

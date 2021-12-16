@@ -1,6 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
+import albumSearchExpression from './shared/album-search-expression';
 import { Album } from './shared/album.model';
 import { DataSource } from './shared/data-source/data-source';
 import { StaticSearchableArrayDataSource } from './shared/data-source/static-searchable-array-data-source';
@@ -29,7 +30,7 @@ export class TopAlbumsComponent implements OnInit, OnDestroy {
     this.albumDataSource = new StaticSearchableArrayDataSource(
       albums,
       this.searchValue,
-      (album, searchStr) => album.name.search(searchStr) !== -1
+      albumSearchExpression
     );
 
     this.albums$ = this.albumDataSource.connect();

@@ -1,15 +1,18 @@
 # ItunesTopAlbums
 
-- [ ] show top 100 albums based on json feed here: https://itunes.apple.com/us/rss/topalbums/limit100/json
-- [ ] Use Angular
-- [ ] Responsive
-- [ ] Crossbrowser support
-- [ ] Use SASS or SCSS for Custom styles
+- [x] show top 100 albums based on json feed here: https://itunes.apple.com/us/rss/topalbums/limit100/json
+- [x] Use Angular
+- [x] Responsive
+- [x] Crossbrowser support
+- [x] Use SASS or SCSS for Custom styles
 - [ ] Make CSS Animation
-- [ ] Make list searchable
+- [x] Make list searchable
 - [ ] Show more info
-- [ ] Host
+- [x] Host
 
+
+## View builded app on github pages
+here: https://vitoxa.github.io/ITunesTop100/top-albums
 
 ## Commands
  - Run `ng serve` Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files...

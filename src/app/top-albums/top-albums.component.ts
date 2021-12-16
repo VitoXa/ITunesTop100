@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
+import { ThrowStmt } from '@angular/compiler';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 import { Album } from './shared/album.model';
+import { DataSource } from './shared/data-source/data-source';
+import { StaticSearchableArrayDataSource } from './shared/data-source/static-searchable-array-data-source';
 import { TopAlbumsService } from './shared/top-albums.service';
 
 @Component({
@@ -8,18 +11,33 @@ import { TopAlbumsService } from './shared/top-albums.service';
   templateUrl: './top-albums.component.html',
   styleUrls: ['./top-albums.component.scss'],
 })
-export class TopAlbumsComponent implements OnInit {
+export class TopAlbumsComponent implements OnInit, OnDestroy {
   static INITIAL_ALBUMS_COUNT = 100;
-
-  albums: Album[] = [];
+  searchValue: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  albumDataSource!: DataSource<Album[]>;
+  albums$!: Observable<Album[]>;
 
   constructor(private topAlbumsService: TopAlbumsService) {}
 
   async ngOnInit(): Promise<void> {
-    this.albums = await firstValueFrom(
+    const albums = await firstValueFrom(
       this.topAlbumsService.getTopAlbums(
         TopAlbumsComponent.INITIAL_ALBUMS_COUNT
       )
     );
+
+    this.albumDataSource = new StaticSearchableArrayDataSource(
+      albums,
+      this.searchValue,
+      (album, searchStr) => album.name.search(searchStr) !== -1
+    );
+
+    this.albums$ = this.albumDataSource.connect();
+  }
+
+  ngOnDestroy(): void {}
+
+  searchChanged(event: KeyboardEvent) {
+    this.searchValue.next((event.target as HTMLInputElement).value);
   }
 }

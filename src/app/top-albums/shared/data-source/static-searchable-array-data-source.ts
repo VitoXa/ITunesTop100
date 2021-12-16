@@ -19,7 +19,7 @@ export class StaticSearchableArrayDataSource<T> implements DataSource<T[]> {
   }
 
   private searchFor(searchString: string): T[] {
-    if (searchString || searchString.trim() === '') {
+    if (!searchString || searchString.trim() === '') {
       return this.initialData;
     }
 

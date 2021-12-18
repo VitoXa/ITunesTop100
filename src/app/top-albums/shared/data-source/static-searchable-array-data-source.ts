@@ -2,20 +2,20 @@ import { map, Observable } from 'rxjs';
 import { DataSource } from './data-source';
 
 export class StaticSearchableArrayDataSource<T> implements DataSource<T[]> {
-  private arraySubject: Observable<T[]>;
+  private arraySubject$: Observable<T[]>;
 
   constructor(
     private initialData: T[],
-    searchString: Observable<string>,
-    private matchExpression: (t: T, searchString: string) => boolean
+    private matchExpression: (t: T, searchString: string) => boolean,
+    searchString$: Observable<string>
   ) {
-    this.arraySubject = searchString.pipe(
+    this.arraySubject$ = searchString$.pipe(
       map((searchString) => this.searchFor(searchString))
     );
   }
 
   connect() {
-    return this.arraySubject;
+    return this.arraySubject$;
   }
 
   private searchFor(searchString: string): T[] {

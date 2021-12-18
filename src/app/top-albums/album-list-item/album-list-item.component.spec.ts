@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { album } from '../shared/album-responce-to-albums-mapper.spec';
 
 import { AlbumListItemComponent } from './album-list-item.component';
 
@@ -16,6 +17,7 @@ describe('AlbumListItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AlbumListItemComponent);
     component = fixture.componentInstance;
+    component.album = album;
     fixture.detectChanges();
   });
 

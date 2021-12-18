@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   Input,
   OnInit,
@@ -16,5 +17,12 @@ export class AlbumListItemComponent {
   @Input()
   album!: Album;
 
-  constructor() {}
+  imgLoaded = false;
+
+  constructor(private changeDetector: ChangeDetectorRef) {}
+
+  imgFullyLoaded() {
+    this.imgLoaded = true;
+    this.changeDetector.detectChanges();
+  }
 }

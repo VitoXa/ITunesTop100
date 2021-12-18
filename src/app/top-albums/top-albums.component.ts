@@ -32,7 +32,7 @@ export class TopAlbumsComponent implements OnInit {
       this.searchValue$
     );
 
-    this.albums$ = this.albumDataSource.connect().pipe(delay(3000));
+    this.albums$ = this.albumDataSource.connect();
   }
 
   searchChanged(event: KeyboardEvent) {

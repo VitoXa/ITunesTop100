@@ -4,7 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
-import { Album } from '../shared/album.model';
+import { Album } from '../../shared/album.model';
 
 @Component({
   selector: 'app-album-list-item',

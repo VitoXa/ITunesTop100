@@ -2,22 +2,12 @@
   <div class="search-container uk-margin uk-container uk-container-large">
     <div class="search-holder">
       <form class="uk-search uk-search-default">
-        <input class="uk-search-input" type="search" placeholder="Search" (keyup)="searchChanged($event)"
-          [disabled]="loading">
+        <input class="uk-search-input" type="search" placeholder="Search" (keyup)="searchChanged($event)">
       </form>
     </div>
   </div>
 
   <div class="album-list-container">
-    <div class="uk-container uk-container-large">
-      <div class="loader" *ngIf="loading">
-        <span uk-spinner="ratio: 3"></span>
-      </div>
-      <ul class="uk-grid-medium uk-child-width-1-2@l uk-grid" uk-grid [@filterAnimation]="albumsLength">
-        <li *ngFor="let album of albums$ | async">
-          <app-album-list-item [album]="album"></app-album-list-item>
-        </li>
-      </ul>
-    </div>
+    <app-album-list [albums]="albums$ | async"></app-album-list>
   </div>
 </div>

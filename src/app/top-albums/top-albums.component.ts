@@ -1,17 +1,5 @@
-import {
-  animate,
-  query,
-  stagger,
-  style,
-  transition,
-  trigger
-} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import {
-  BehaviorSubject, firstValueFrom,
-  map,
-  Observable
-} from 'rxjs';
+import { BehaviorSubject, delay, firstValueFrom, map, Observable } from 'rxjs';
 import albumSearchExpression from './shared/album-search-expression';
 import { Album } from './shared/album.model';
 import { DataSource } from './shared/data-source/data-source';
@@ -22,46 +10,12 @@ import { TopAlbumsService } from './shared/top-albums.service';
   selector: 'app-top-albums',
   templateUrl: './top-albums.component.html',
   styleUrls: ['./top-albums.component.scss'],
-  animations: [
-    trigger('filterAnimation', [
-      transition(':enter, -1 => *', [
-        query(
-          ':enter',
-          [
-            style({ opacity: 0 }),
-            stagger(100, animate('300ms ease-out', style({ opacity: 1 }))),
-          ],
-          { optional: true }
-        ),
-      ]),
-
-      transition(':increment', [
-        query(
-          ':enter',
-          [
-            style({ opacity: 0 }),
-
-            animate('300ms ease-out', style({ opacity: 1 })),
-          ],
-          { optional: true }
-        ),
-      ]),
-      transition(':decrement', [
-        query(':leave', [animate('300ms ease-out', style({ opacity: 0 }))]),
-      ]),
-    ]),
-  ],
 })
 export class TopAlbumsComponent implements OnInit {
   static INITIAL_ALBUMS_COUNT = 100;
   albumDataSource!: DataSource<Album[]>;
   searchValue$: BehaviorSubject<string> = new BehaviorSubject<string>('');
   albums$!: Observable<Album[]>;
-  albumsLength = -1;
-
-  get loading() {
-    return this.albumsLength === -1;
-  }
 
   constructor(private topAlbumsService: TopAlbumsService) {}
 
@@ -78,11 +32,7 @@ export class TopAlbumsComponent implements OnInit {
       this.searchValue$
     );
 
-    this.albums$ = this.albumDataSource.connect();
-
-    this.albums$
-      .pipe(map((a) => a.length))
-      .subscribe((l) => (this.albumsLength = l));
+    this.albums$ = this.albumDataSource.connect().pipe(delay(3000));
   }
 
   searchChanged(event: KeyboardEvent) {

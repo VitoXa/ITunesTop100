@@ -1,0 +1,19 @@
+.top-albums-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.search-container {
+  flex: 0 0 auto;
+
+}
+
+.album-list-container {
+  flex: 1 1 auto;
+  overflow: auto;
+}

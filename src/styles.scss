@@ -14,3 +14,8 @@ $global-link-color: $accent;
 
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit-theme.scss";
+
+body,
+html {
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  flex: 0 0 auto;
+  nav {
+    margin-bottom: 0px;
+  }
+}
+
+main {
+  flex: 1 1 0;
+  overflow: auto;
+
+}

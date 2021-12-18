@@ -1,13 +1,15 @@
-<header>
-  <div class="uk-container uk-container-large">
-    <h1 class="uk-heading-small uk-margin-bottom ">Itunes Top 100 Albums</h1>
-  </div>
-</header>
-<main>
-  <div class="uk-container uk-container-large">
-    <router-outlet></router-outlet>
-  </div>
-</main>
+<div class="app-container">
+  <header>
+    <nav class="uk-navbar-container uk-margin" uk-navbar>
+      <div class="uk-navbar-center">
+        <h1><a class="uk-navbar-item uk-logo" href="#">Itunes Top 100 Albums</a></h1>
+      </div>
+    </nav>
+  </header>
+  <main>
+      <router-outlet></router-outlet>
+  </main>
 
-<footer>
-</footer>
+  <footer>
+  </footer>
+</div>

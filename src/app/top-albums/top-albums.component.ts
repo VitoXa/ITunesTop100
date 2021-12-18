@@ -4,18 +4,13 @@ import {
   stagger,
   style,
   transition,
-  trigger,
+  trigger
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import {
-  BehaviorSubject,
-  concat,
-  debounceTime,
-  firstValueFrom,
+  BehaviorSubject, firstValueFrom,
   map,
-  Observable,
-  of,
-  tap,
+  Observable
 } from 'rxjs';
 import albumSearchExpression from './shared/album-search-expression';
 import { Album } from './shared/album.model';
@@ -63,6 +58,10 @@ export class TopAlbumsComponent implements OnInit {
   searchValue$: BehaviorSubject<string> = new BehaviorSubject<string>('');
   albums$!: Observable<Album[]>;
   albumsLength = -1;
+
+  get loading() {
+    return this.albumsLength === -1;
+  }
 
   constructor(private topAlbumsService: TopAlbumsService) {}
 

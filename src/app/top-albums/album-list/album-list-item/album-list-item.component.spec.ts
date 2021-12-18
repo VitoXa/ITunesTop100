@@ -61,39 +61,27 @@ describe('AlbumListItemComponent', () => {
   });
 
   it('should render correctly', () => {
-    expect(pageObject.albumImg.getAttribute('src')).toEqual(album.imgBigger.src);
+    expect(pageObject.albumImg.getAttribute('src')).toEqual(
+      album.imgBigger.src
+    );
     expect(pageObject.albumName.textContent?.trim()).toEqual(album.name);
-    expect(pageObject.artistName.textContent?.trim()).toEqual(album.artist.label);
-    expect(pageObject.trackInfo.textContent?.trim()).toEqual("12 tracks · Pop · 2021");
-    expect(pageObject.linkToAppleMusic.textContent?.trim()).toEqual("$9.99 on apple music");
-  });
-
-  fit('should render have img placeholder shown till img will be loaded', () => {
-    // Assert
-    expect(
-      pageObject.albumPlaceholder.classList.contains('hidden')
-    ).toBeFalse();
-    expect(pageObject.albumImg.classList.contains('hidden')).toBeTruthy();
-  });
-
-  fit('should hide img placeholder when img is loaded', () => {
-    // Arrange/ Act
-    pageObject.albumImg.dispatchEvent(new Event('load'));
-    fixture.detectChanges();
-    // Assert
-    expect(
-      pageObject.albumPlaceholder.classList.contains('hidden')
-    ).toBeTruthy();
-    expect(pageObject.albumImg.classList.contains('hidden')).toBeFalse();
+    expect(pageObject.artistName.textContent?.trim()).toEqual(
+      album.artist.label
+    );
+    expect(pageObject.trackInfo.textContent?.trim()).toEqual(
+      '12 tracks · Pop · 2021'
+    );
+    expect(pageObject.linkToAppleMusic.textContent?.trim()).toEqual(
+      '$9.99 on apple music'
+    );
   });
 });
 
 class AlbumListItemComponentPageObject {
-  get albumPlaceholder() {
-    return this.host.querySelectorAll('.album-cover-holder img.album-cover')[0];
-  }
   get albumImg() {
-    return this.host.querySelectorAll('.album-cover-holder img.album-cover')[1];
+    return this.host.querySelector(
+      '.album-cover-holder img.album-cover'
+    ) as HTMLElement;
   }
 
   get albumName() {
@@ -116,4 +104,3 @@ class AlbumListItemComponentPageObject {
 
   constructor(private host: HTMLElement) {}
 }
-

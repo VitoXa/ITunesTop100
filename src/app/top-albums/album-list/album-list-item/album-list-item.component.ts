@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Album } from '../../shared/album.model';
 
 @Component({
@@ -17,12 +11,5 @@ export class AlbumListItemComponent {
   @Input()
   album!: Album;
 
-  imgLoaded = false;
-
-  constructor(private changeDetector: ChangeDetectorRef) {}
-
-  imgFullyLoaded() {
-    this.imgLoaded = true;
-    this.changeDetector.detectChanges();
-  }
+  constructor() {}
 }

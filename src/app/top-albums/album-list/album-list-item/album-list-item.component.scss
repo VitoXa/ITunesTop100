@@ -1,6 +1,16 @@
-.album-cover {
+@mixin coverDimensions {
   height: 254px;
   width: 254px;
+}
+
+.album-cover {
+  @include coverDimensions;
+}
+
+.album-cover-holder {
+  @include coverDimensions;
+
+  background-image: url("/assets/img-placeholder.svg");
 }
 
 h3.album-name {

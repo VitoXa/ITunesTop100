@@ -5,7 +5,7 @@
 </div>
 
 
-<ul class="uk-grid-medium uk-child-width-1-2@l uk-grid" uk-grid>
+<ul class="uk-grid-medium uk-child-width-1-2@l uk-grid" uk-grid [@filterAnimation]="albumsLength">
   <li *ngFor="let album of albums$ | async">
     <app-album-list-item [album]="album"></app-album-list-item>
   </li>

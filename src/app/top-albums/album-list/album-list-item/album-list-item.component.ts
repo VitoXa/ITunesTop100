@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { AlbumInfoModalServiceService } from '../../album-info/album-info-modal-service.service';
 import { Album } from '../../shared/album.model';
 
 @Component({
@@ -11,10 +12,10 @@ export class AlbumListItemComponent {
   @Input()
   album!: Album;
 
-  constructor() {}
+  constructor(private albumInfoModalService: AlbumInfoModalServiceService) {}
 
   openAlbumInfo() {
-    alert("Where are all dialogs?");
+    this.albumInfoModalService.showAlbumInfo(this.album);
   }
 
   stopPropagation(e: MouseEvent) {

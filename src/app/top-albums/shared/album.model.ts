@@ -2,6 +2,7 @@ export interface Album {
   id: string;
   link: string
   name: string;
+  title: string;
   tracksCount: number;
   artist: LabeledLink;
   rights: string;

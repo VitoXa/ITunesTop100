@@ -1,0 +1,49 @@
+<h2 class="mat-dialog-title">{{album.title}}</h2>
+<div mat-dialog-content>
+  <div uk-grid>
+    <div class="uk-width-auto@m">
+      <img [src]="album.imgBigger.src" alt="album cover" class="uk-align-left uk-margin-remove-adjacent">
+    </div>
+    <div class="uk-width-expand@m">
+      <table class="uk-table uk-table-small uk-table-divider uk-table-striped">
+        <tbody>
+          <tr>
+            <td>Album name</td>
+            <td>{{album.name}}</td>
+          </tr>
+          <tr>
+            <td>Artist</td>
+            <td>{{album.artist.label}}</td>
+          </tr>
+          <tr>
+            <td>Top 100 position</td>
+            <td>{{album.position}}</td>
+          </tr>
+          <tr>
+            <td>Tracks count</td>
+            <td>{{album.tracksCount}}</td>
+          </tr>
+          <tr>
+            <td>Category</td>
+            <td>{{album.category.label}}</td>
+          </tr>
+          <tr>
+            <td>Release date</td>
+            <td>{{album.releaseDate | date}}</td>
+          </tr>
+          <tr>
+            <td>Copyright information</td>
+            <td>{{album.rights}}</td>
+          </tr>
+          <tr>
+            <td>Price on Apple music</td>
+            <td>{{album.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-dialog-close class="uk-button uk-button-default">Close</button>
+</mat-dialog-actions>

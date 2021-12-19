@@ -15,11 +15,6 @@ $global-link-color: $accent;
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit-theme.scss";
 
-body,
-html {
-  height: 100%;
-}
-
 .no-margin{
   margin-top: 0;
   margin-bottom: 0;
@@ -27,3 +22,12 @@ html {
   margin-right: 0;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+.custom-dialog {
+  .mat-dialog-container {
+    border-radius: 0;
+  }
+}

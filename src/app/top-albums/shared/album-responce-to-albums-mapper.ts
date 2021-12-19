@@ -5,6 +5,7 @@ export function mapToAlbum(albumResponse: AlbumEntry, index: number): Album {
   return {
     id: albumResponse.id.attributes['im:id'],
     link: albumResponse.id.label,
+    title: albumResponse.title.label,
     name: albumResponse['im:name'].label,
     tracksCount: Number.parseInt(albumResponse['im:itemCount'].label),
     artist: {

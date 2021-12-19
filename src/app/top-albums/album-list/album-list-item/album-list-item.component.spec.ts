@@ -1,15 +1,18 @@
 import { ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AlbumInfoModalService } from '../../album-info/album-info-modal.service';
 import { Album } from '../../shared/album.model';
-
 import { AlbumListItemComponent } from './album-list-item.component';
 
 describe('AlbumListItemComponent', () => {
   let component: AlbumListItemComponent;
   let fixture: ComponentFixture<AlbumListItemComponent>;
   let pageObject: AlbumListItemComponentPageObject;
+  let albumInfoModalServiceMock: jasmine.SpyObj<AlbumInfoModalService>;
+
   const album: Album = {
     id: '1590035691',
+    title: '30 - Adele',
     link: 'https://music.apple.com/us/album/30/1590035691?uo=2',
     name: '30',
     tracksCount: 12,
@@ -33,11 +36,20 @@ describe('AlbumListItemComponent', () => {
     },
     price: '$9.99',
     releaseDate: new Date('2021-11-19T07:00:00.000Z'),
+    position: 1,
   };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AlbumListItemComponent],
+      providers: [
+        {
+          provide: AlbumInfoModalService,
+          useValue: jasmine.createSpyObj<AlbumInfoModalService>([
+            'showAlbumInfo',
+          ]),
+        },
+      ],
     })
       // needs for change detection works in tests
       .overrideComponent(AlbumListItemComponent, {
@@ -49,6 +61,10 @@ describe('AlbumListItemComponent', () => {
   });
 
   beforeEach(() => {
+    albumInfoModalServiceMock = TestBed.inject(
+      AlbumInfoModalService
+    ) as jasmine.SpyObj<AlbumInfoModalService>;
+
     fixture = TestBed.createComponent(AlbumListItemComponent);
     component = fixture.componentInstance;
     component.album = album;
@@ -75,6 +91,12 @@ describe('AlbumListItemComponent', () => {
       '$9.99 on apple music'
     );
   });
+
+  it('should open modal on click', () => {
+    pageObject.albumContainer.click();
+
+    expect(albumInfoModalServiceMock.showAlbumInfo).toHaveBeenCalledWith(album);
+  });
 });
 
 class AlbumListItemComponentPageObject {
@@ -100,6 +122,10 @@ class AlbumListItemComponentPageObject {
 
   get linkToAppleMusic() {
     return this.host.querySelector('.uk-card-footer a') as HTMLAnchorElement;
+  }
+
+  get albumContainer() {
+    return this.host.querySelector('.album-container') as HTMLElement;
   }
 
   constructor(private host: HTMLElement) {}

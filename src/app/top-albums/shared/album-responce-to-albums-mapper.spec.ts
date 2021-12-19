@@ -3,7 +3,7 @@ import { Album } from './album.model';
 
 describe('mapToAlbum', () => {
   it('should parse Albums correctly', () => {
-    const parsedAlbum = mapToAlbum(mockResponseEntry, 7);
+    const parsedAlbum = mapToAlbum(mockResponseEntry, 0);
 
     expect(parsedAlbum).toEqual(album);
   });
@@ -77,6 +77,7 @@ export const mockResponseEntry = {
 
 export const album: Album = {
   id: '1590035691',
+  title: '30 - Adele',
   link: 'https://music.apple.com/us/album/30/1590035691?uo=2',
   name: '30',
   tracksCount: 12,
@@ -100,5 +101,5 @@ export const album: Album = {
   },
   price: '$9.99',
   releaseDate: new Date('2021-11-19T07:00:00.000Z'),
-  position: 8
+  position: 1
 };

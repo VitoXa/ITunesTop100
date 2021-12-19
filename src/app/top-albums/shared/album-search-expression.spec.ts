@@ -4,6 +4,7 @@ import { Album } from './album.model';
 describe('albumSearchExpression', () => {
   const album: Album = {
     id: '1590035691',
+    title: '30 - Adele',
     link: 'https://music.apple.com/us/album/30/1590035691?uo=2',
     name: '30 and Stuff',
     tracksCount: 12,
@@ -27,7 +28,7 @@ describe('albumSearchExpression', () => {
     },
     price: '$9.99',
     releaseDate: new Date('2021-11-19T07:00:00.000Z'),
-    position: 1
+    position: 1,
   };
 
   it('should check artist name', () => {

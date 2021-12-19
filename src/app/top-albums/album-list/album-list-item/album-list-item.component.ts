@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { AlbumInfoModalServiceService } from '../../album-info/album-info-modal-service.service';
+import { AlbumInfoModalService } from '../../album-info/album-info-modal.service';
 import { Album } from '../../shared/album.model';
 
 @Component({
@@ -12,7 +12,7 @@ export class AlbumListItemComponent {
   @Input()
   album!: Album;
 
-  constructor(private albumInfoModalService: AlbumInfoModalServiceService) {}
+  constructor(private albumInfoModalService: AlbumInfoModalService) {}
 
   openAlbumInfo() {
     this.albumInfoModalService.showAlbumInfo(this.album);

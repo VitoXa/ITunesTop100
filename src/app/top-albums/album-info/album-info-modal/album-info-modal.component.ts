@@ -10,7 +10,7 @@ import { Album } from '../../shared/album.model';
 export class AlbumInfoModalComponent implements OnInit {
   album: Album;
   constructor(@Inject(MAT_DIALOG_DATA) albumData: AlbumInfoData) {
-    this.album = albumData.album;
+    this.album = albumData.album
   }
 
   ngOnInit(): void {}

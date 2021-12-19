@@ -4,7 +4,7 @@ import { Album } from '../shared/album.model';
 import { AlbumInfoModalComponent } from './album-info-modal/album-info-modal.component';
 
 @Injectable()
-export class AlbumInfoModalServiceService {
+export class AlbumInfoModalService {
   constructor(private dialog: MatDialog) {}
 
   showAlbumInfo(album: Album) {

@@ -2,21 +2,10 @@
   <div class="loader" *ngIf="albums === null">
     <span uk-spinner="ratio: 3"></span>
   </div>
-  <ul *ngIf="albums" class="uk-grid-medium uk-column-1-2@l uk-child-width-1-2@l uk-grid" uk-grid [@filterAnimation]="albums.length">
-    <li *ngFor="let album of albums; trackBy: trackAlbum"
-      class="uk-grid uk-margin-remove-top uk-margin-bottom">
-      <div class="position-number-holder" class="uk-width-auto uk-flex uk-flex-column uk-flex-center">
-        <div class="position-holder">
-          <div class="vinyl-disk">
-            <div class="vinyl-disk-center">
-            </div>
-            <span class="uk-text-large position-number"> #{{ 1 }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="uk-width-expand uk-padding-remove">
-        <app-album-list-item [album]="album"></app-album-list-item>
-      </div>
+  <ul *ngIf="albums" class="uk-grid-medium uk-column-1-2@l uk-child-width-1-2@l uk-grid" uk-grid
+    [@filterAnimation]="albums.length">
+    <li *ngFor="let album of albums; trackBy: trackAlbum" class="list-item">
+      <app-album-list-item [album]="album" ></app-album-list-item>
     </li>
   </ul>
 </div>

@@ -1,3 +1,5 @@
+@import "/src/colors.scss";
+
 @mixin coverDimensions {
   height: 200px;
   width: 200px;
@@ -11,6 +13,14 @@
   @include coverDimensions;
 
   background-image: url("/assets/img-placeholder.svg");
+}
+
+:host {
+  width: 100%;
+}
+
+.album-container {
+  height: 100%;
 }
 
 h3.album-name {
@@ -45,4 +55,44 @@ h4.artist-name {
 
 .list-item-container {
   height: 100%;
+}
+
+.position-holder {
+  width: 80px;
+  .vinyl-disk {
+    height: 190px;
+    width: 190px;
+    border-radius: 95px;
+    background-color: black;
+    background: repeating-radial-gradient(black, #201e1e 3px);
+    position: relative;
+    transform: translateX(15px);
+
+    transition: transform 200ms ease-in-out;
+  }
+
+  .vinyl-disk-center {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: $accent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .position-number {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+  }
+}
+
+:host:hover {
+  .vinyl-disk {
+    transform: translateX(0) rotate(-5deg);
+  }
 }

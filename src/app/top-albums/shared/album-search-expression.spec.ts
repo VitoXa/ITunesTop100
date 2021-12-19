@@ -27,6 +27,7 @@ describe('albumSearchExpression', () => {
     },
     price: '$9.99',
     releaseDate: new Date('2021-11-19T07:00:00.000Z'),
+    position: 1
   };
 
   it('should check artist name', () => {

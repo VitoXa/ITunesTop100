@@ -3,7 +3,7 @@ import { Album } from './album.model';
 
 describe('mapToAlbum', () => {
   it('should parse Albums correctly', () => {
-    const parsedAlbum = mapToAlbum(mockResponseEntry);
+    const parsedAlbum = mapToAlbum(mockResponseEntry, 7);
 
     expect(parsedAlbum).toEqual(album);
   });
@@ -100,4 +100,5 @@ export const album: Album = {
   },
   price: '$9.99',
   releaseDate: new Date('2021-11-19T07:00:00.000Z'),
+  position: 8
 };

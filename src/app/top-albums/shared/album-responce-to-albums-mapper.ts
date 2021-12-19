@@ -1,7 +1,7 @@
 import { Album } from './album.model';
 import { AlbumEntry, Imimage } from './top-albums-response';
 
-export function mapToAlbum(albumResponse: AlbumEntry): Album {
+export function mapToAlbum(albumResponse: AlbumEntry, index: number): Album {
   return {
     id: albumResponse.id.attributes['im:id'],
     link: albumResponse.id.label,
@@ -20,6 +20,7 @@ export function mapToAlbum(albumResponse: AlbumEntry): Album {
     imgSmall: mapImage(albumResponse['im:image'][0]),
     price: albumResponse['im:price'].label,
     releaseDate: new Date(albumResponse['im:releaseDate'].label),
+    position: index + 1
   };
 }
 

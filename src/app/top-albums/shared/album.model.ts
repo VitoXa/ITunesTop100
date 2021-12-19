@@ -10,6 +10,7 @@ export interface Album {
   category: LabeledLink;
   releaseDate: Date;
   price: string;
+  position: number;
 }
 
 

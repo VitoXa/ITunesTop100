@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { mapToAlbum } from './album-responce-to-albums-mapper';
 import { Album } from './album.model';
 import { TopAlbumsResponse } from './top-albums-response';

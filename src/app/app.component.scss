@@ -6,13 +6,21 @@
 
 header {
   flex: 0 0 auto;
-  nav {
-    margin-bottom: 0px;
+  align-items: center;
+  h1 {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
 main {
   flex: 1 1 0;
   overflow: auto;
+}
 
+.logo {
+  vertical-align: middle;
+  height: 42px;
+  width: 42px;
 }

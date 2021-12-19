@@ -1,6 +1,6 @@
 <div class="top-albums-container" *ngIf="!connectionError">
   <div class="uk-container uk-container-large uk-margin-small">
-    <div class="all-width">
+    <div>
       <form class="uk-search uk-search-default">
         <span class="uk-search-icon-flip" uk-search-icon></span>
         <input class="uk-search-input" type="search" placeholder="Search" (keyup)="searchChanged($event)">
@@ -14,7 +14,7 @@
 </div>
 
 <div *ngIf="connectionError" class="connection-error-message">
-  <div class="uk-container uk-container-large uk-margin-small" >
+  <div class="uk-container uk-container-large uk-margin-small">
     <div class="uk-alert-danger" uk-alert>
       <h3>Connection problem ocurred</h3>
       <p>Sorry, apple services is currently unavailable. Try again later</p>

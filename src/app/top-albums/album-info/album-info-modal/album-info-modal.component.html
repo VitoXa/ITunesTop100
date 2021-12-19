@@ -9,11 +9,11 @@
         <tbody>
           <tr>
             <td>Album name</td>
-            <td>{{album.name}}</td>
+            <td><a [href]="album.link" target="_blank">{{album.name}}</a></td>
           </tr>
           <tr>
             <td>Artist</td>
-            <td>{{album.artist.label}}</td>
+            <td><a [href]="album.artist.link" target="_blank">{{album.artist.label}}</a></td>
           </tr>
           <tr>
             <td>Top 100 position</td>
@@ -25,7 +25,7 @@
           </tr>
           <tr>
             <td>Category</td>
-            <td>{{album.category.label}}</td>
+            <td><a [href]="album.category.link" target="_blank">{{album.category.label}}</a></td>
           </tr>
           <tr>
             <td>Release date</td>

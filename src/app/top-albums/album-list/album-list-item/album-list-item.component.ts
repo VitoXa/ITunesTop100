@@ -12,4 +12,12 @@ export class AlbumListItemComponent {
   album!: Album;
 
   constructor() {}
+
+  openAlbumInfo() {
+    alert("Where are all dialogs?");
+  }
+
+  stopPropagation(e: MouseEvent) {
+    e.stopPropagation();
+  }
 }

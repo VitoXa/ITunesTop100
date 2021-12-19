@@ -21,6 +21,18 @@
 
 .album-container {
   height: 100%;
+  width: 100%;
+  background: none;
+  display: flex;
+  border: none;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px dotted #333;
+    .vinyl-disk {
+      transform: translateX(0) rotate(-5deg);
+    }
+  }
 }
 
 h3.album-name {
@@ -54,6 +66,10 @@ h4.artist-name {
 }
 
 .list-item-container {
+  height: 100%;
+}
+
+.position-number-holder {
   height: 100%;
 }
 

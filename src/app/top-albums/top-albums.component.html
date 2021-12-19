@@ -1,4 +1,4 @@
-<div class="top-albums-container">
+<div class="top-albums-container" *ngIf="!connectionError">
   <div class="uk-container uk-container-large uk-margin-small">
     <div class="all-width">
       <form class="uk-search uk-search-default">
@@ -10,5 +10,15 @@
 
   <div class="album-list-container">
     <app-album-list [albums]="albums$ | async"></app-album-list>
+  </div>
+</div>
+
+<div *ngIf="connectionError" class="connection-error-message">
+  <div class="uk-container uk-container-large uk-margin-small" >
+    <div class="uk-alert-danger" uk-alert>
+      <h3>Connection problem ocurred</h3>
+      <p>Sorry, apple services is currently unavailable. Try again later</p>
+      <button class="uk-button uk-button-default" (click)="fetchData()">Try again</button>
+    </div>
   </div>
 </div>

@@ -16,23 +16,34 @@ export class TopAlbumsComponent implements OnInit {
   albumDataSource!: DataSource<Album[]>;
   searchValue$: BehaviorSubject<string> = new BehaviorSubject<string>('');
   albums$!: Observable<Album[]>;
+  connectionError = false;
 
   constructor(private topAlbumsService: TopAlbumsService) {}
 
   async ngOnInit(): Promise<void> {
+    await this.fetchData();
+  }
+
+  async fetchData() {
+    this.connectionError = false;
     const albums = await firstValueFrom(
       this.topAlbumsService.getTopAlbums(
         TopAlbumsComponent.INITIAL_ALBUMS_COUNT
       )
-    );
+    ).catch(() => {
+      this.connectionError = true;
+      return null;
+    });
 
-    this.albumDataSource = new StaticSearchableArrayDataSource(
-      albums,
-      albumSearchExpression,
-      this.searchValue$
-    );
+    if (albums !== null) {
+      this.albumDataSource = new StaticSearchableArrayDataSource(
+        albums,
+        albumSearchExpression,
+        this.searchValue$
+      );
 
-    this.albums$ = this.albumDataSource.connect();
+      this.albums$ = this.albumDataSource.connect();
+    }
   }
 
   searchChanged(event: KeyboardEvent) {

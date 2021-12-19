@@ -5,9 +5,9 @@
 - [x] Responsive
 - [x] Crossbrowser support
 - [x] Use SASS or SCSS for Custom styles
-- [ ] Make CSS Animation
+- [x] Make CSS Animation
 - [x] Make list searchable
-- [ ] Show more info
+- [x] Show more info
 - [x] Host
 
 

@@ -1,4 +1,4 @@
-<button class="album-container" (click)="openAlbumInfo()">
+<div class="album-container" (click)="openAlbumInfo()">
   <div class="position-number-holder uk-width-auto uk-flex uk-flex-column uk-flex-center uk-visible@s">
     <div class="position-holder">
       <div class="vinyl-disk">
@@ -20,11 +20,11 @@
         <div class="album-cover-holder-small uk-align-left uk-hidden@s">
           <img class="album-cover" [src]="album.imgBigger.src" alt="albums cover">
         </div>
-        <h3 class="uk-card-title album-name">{{album.name}}</h3>
+        <h3 class="uk-card-title album-name" tabindex="0" role="button" (click)="openAlbumInfo()" (keydown)="onAlbumNameKeyDown($event)">{{album.name}}</h3>
         <h4 class="artist-name">{{ album.artist.label}}</h4>
       </div>
       <div class="uk-card-body album-info-body">
-        <p class="uk-text-meta uk-margin-remove-top">
+        <p class="uk-text-meta uk-margin-remove-top uk-text-emphasis">
           <span>{{ album.tracksCount }} tracks</span>
           <span> · </span>
           <span>{{album.category.label}}</span>
@@ -41,4 +41,4 @@
       </div>
     </div>
   </div>
-</button>
+</div>

@@ -21,4 +21,12 @@ export class AlbumListItemComponent {
   stopPropagation(e: MouseEvent) {
     e.stopPropagation();
   }
+
+  onAlbumNameKeyDown(e: KeyboardEvent) {
+    if (e.key === ' ' || e.key === "enter") {
+      e.preventDefault();
+      e.stopPropagation();
+      this.openAlbumInfo();
+    }
+  }
 }

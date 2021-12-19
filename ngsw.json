@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1639930797576,
-  "index": "/index.html",
+  "timestamp": 1639931027970,
+  "index": "/ITunesTop100/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,15 +11,15 @@
         "ignoreVary": true
       },
       "urls": [
-        "/728.c70365fb046c99f0.js",
-        "/favicon.ico",
-        "/index.html",
-        "/main.50bd728741770e72.js",
-        "/manifest.webmanifest",
-        "/polyfills.27669aca434a31c8.js",
-        "/runtime.4a83b6c3cb399cca.js",
-        "/scripts.bfb02253c5ecb4e6.js",
-        "/styles.add479d875c018f4.css"
+        "/ITunesTop100/728.c70365fb046c99f0.js",
+        "/ITunesTop100/favicon.ico",
+        "/ITunesTop100/index.html",
+        "/ITunesTop100/main.50bd728741770e72.js",
+        "/ITunesTop100/manifest.webmanifest",
+        "/ITunesTop100/polyfills.27669aca434a31c8.js",
+        "/ITunesTop100/runtime.4a83b6c3cb399cca.js",
+        "/ITunesTop100/scripts.bfb02253c5ecb4e6.js",
+        "/ITunesTop100/styles.add479d875c018f4.css"
       ],
       "patterns": []
     },
@@ -31,41 +31,41 @@
         "ignoreVary": true
       },
       "urls": [
-        "/assets/icons/icon-128x128.png",
-        "/assets/icons/icon-144x144.png",
-        "/assets/icons/icon-152x152.png",
-        "/assets/icons/icon-192x192.png",
-        "/assets/icons/icon-384x384.png",
-        "/assets/icons/icon-512x512.png",
-        "/assets/icons/icon-72x72.png",
-        "/assets/icons/icon-96x96.png",
-        "/assets/img-placeholder.svg",
-        "/assets/logo.png"
+        "/ITunesTop100/assets/icons/icon-128x128.png",
+        "/ITunesTop100/assets/icons/icon-144x144.png",
+        "/ITunesTop100/assets/icons/icon-152x152.png",
+        "/ITunesTop100/assets/icons/icon-192x192.png",
+        "/ITunesTop100/assets/icons/icon-384x384.png",
+        "/ITunesTop100/assets/icons/icon-512x512.png",
+        "/ITunesTop100/assets/icons/icon-72x72.png",
+        "/ITunesTop100/assets/icons/icon-96x96.png",
+        "/ITunesTop100/assets/img-placeholder.svg",
+        "/ITunesTop100/assets/logo.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/728.c70365fb046c99f0.js": "16124e72f027fe0948eeae6a590deabb363f5eca",
-    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/assets/img-placeholder.svg": "cb9818bacc40a853c725de1223518f0ee557bb74",
-    "/assets/logo.png": "0a71542de7cd34c5b675f64aee41869ac5a5d3c5",
-    "/favicon.ico": "9ea7f338e76247a37bb84ec31de75b6b5ef6e9de",
-    "/index.html": "d690a6fc7ec87c181f69883d7384e6d20de56777",
-    "/main.50bd728741770e72.js": "1b6277ad74b70a9923aa530dbd52a11937448e98",
-    "/manifest.webmanifest": "d5132d0e018d6a487836786737715ba3ff6c80cd",
-    "/polyfills.27669aca434a31c8.js": "d6ec93833236765ea2d5fd8b02367a514610e7f3",
-    "/runtime.4a83b6c3cb399cca.js": "1f6753a80924db970dc28becb277949a59912ae8",
-    "/scripts.bfb02253c5ecb4e6.js": "5ee0d9b7a276e5dc7c104a806c0827f8fed8bea8",
-    "/styles.add479d875c018f4.css": "434c9a26c51ffc5d64abbfe3233c4f2bb5323ede"
+    "/ITunesTop100/728.c70365fb046c99f0.js": "16124e72f027fe0948eeae6a590deabb363f5eca",
+    "/ITunesTop100/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/ITunesTop100/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/ITunesTop100/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/ITunesTop100/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/ITunesTop100/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/ITunesTop100/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/ITunesTop100/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/ITunesTop100/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/ITunesTop100/assets/img-placeholder.svg": "cb9818bacc40a853c725de1223518f0ee557bb74",
+    "/ITunesTop100/assets/logo.png": "0a71542de7cd34c5b675f64aee41869ac5a5d3c5",
+    "/ITunesTop100/favicon.ico": "9ea7f338e76247a37bb84ec31de75b6b5ef6e9de",
+    "/ITunesTop100/index.html": "b7e80495e33b06cf711a44acce28ef64ec357e27",
+    "/ITunesTop100/main.50bd728741770e72.js": "1b6277ad74b70a9923aa530dbd52a11937448e98",
+    "/ITunesTop100/manifest.webmanifest": "d5132d0e018d6a487836786737715ba3ff6c80cd",
+    "/ITunesTop100/polyfills.27669aca434a31c8.js": "d6ec93833236765ea2d5fd8b02367a514610e7f3",
+    "/ITunesTop100/runtime.4a83b6c3cb399cca.js": "1f6753a80924db970dc28becb277949a59912ae8",
+    "/ITunesTop100/scripts.bfb02253c5ecb4e6.js": "5ee0d9b7a276e5dc7c104a806c0827f8fed8bea8",
+    "/ITunesTop100/styles.add479d875c018f4.css": "434c9a26c51ffc5d64abbfe3233c4f2bb5323ede"
   },
   "navigationUrls": [
     {

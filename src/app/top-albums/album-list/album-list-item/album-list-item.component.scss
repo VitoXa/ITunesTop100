@@ -1,6 +1,6 @@
 @mixin coverDimensions {
-  height: 254px;
-  width: 254px;
+  height: 200px;
+  width: 200px;
 }
 
 .album-cover {
@@ -37,4 +37,12 @@ h4.artist-name {
 
 .hidden {
   display: none;
+}
+
+.lesser-paddings {
+  padding: 10px 20px;
+}
+
+.list-item-container {
+  height: 100%;
 }

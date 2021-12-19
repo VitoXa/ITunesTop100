@@ -51,4 +51,8 @@ export class AlbumListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  trackAlbum(_: number, album: Album) {
+    return album.id;
+  }
 }

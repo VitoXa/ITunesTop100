@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1639931027970,
+  "timestamp": 1639931893105,
   "index": "/ITunesTop100/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "/ITunesTop100/728.c70365fb046c99f0.js",
         "/ITunesTop100/favicon.ico",
         "/ITunesTop100/index.html",
-        "/ITunesTop100/main.50bd728741770e72.js",
+        "/ITunesTop100/main.717c68181cb838f6.js",
         "/ITunesTop100/manifest.webmanifest",
         "/ITunesTop100/polyfills.27669aca434a31c8.js",
         "/ITunesTop100/runtime.4a83b6c3cb399cca.js",
@@ -59,8 +59,8 @@
     "/ITunesTop100/assets/img-placeholder.svg": "cb9818bacc40a853c725de1223518f0ee557bb74",
     "/ITunesTop100/assets/logo.png": "0a71542de7cd34c5b675f64aee41869ac5a5d3c5",
     "/ITunesTop100/favicon.ico": "9ea7f338e76247a37bb84ec31de75b6b5ef6e9de",
-    "/ITunesTop100/index.html": "b7e80495e33b06cf711a44acce28ef64ec357e27",
-    "/ITunesTop100/main.50bd728741770e72.js": "1b6277ad74b70a9923aa530dbd52a11937448e98",
+    "/ITunesTop100/index.html": "bf6a3031fd5b2f67211d74cc74f8ea93453025a9",
+    "/ITunesTop100/main.717c68181cb838f6.js": "a4e098c368c42e5a099c5384d864a8b6f8977fac",
     "/ITunesTop100/manifest.webmanifest": "d5132d0e018d6a487836786737715ba3ff6c80cd",
     "/ITunesTop100/polyfills.27669aca434a31c8.js": "d6ec93833236765ea2d5fd8b02367a514610e7f3",
     "/ITunesTop100/runtime.4a83b6c3cb399cca.js": "1f6753a80924db970dc28becb277949a59912ae8",

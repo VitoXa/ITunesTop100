@@ -15,8 +15,11 @@
         <img class="album-cover" [src]="album.imgBigger.src" alt="albums cover">
       </div>
     </div>
-    <div class=" uk-card uk-flex uk-flex-column uk-flex-between uk-width-expand  ">
+    <div class="uk-card uk-flex uk-flex-column uk-flex-between uk-width-expand">
       <div class="uk-card-header no-borders lesser-paddings uk-text-left">
+        <div class="album-cover-holder-small uk-align-left uk-hidden@s">
+          <img class="album-cover" [src]="album.imgBigger.src" alt="albums cover">
+        </div>
         <h3 class="uk-card-title album-name">{{album.name}}</h3>
         <h4 class="artist-name">{{ album.artist.label}}</h4>
       </div>
@@ -31,7 +34,8 @@
       </div>
       <div class="uk-card-footer no-borders lesser-paddings">
 
-        <a [href]="album.link" target="_blank" class="uk-button uk-button-text uk-align-right" (click)="stopPropagation($event)">{{ album.price }} on
+        <a [href]="album.link" target="_blank" class="uk-button uk-button-text uk-align-right"
+          (click)="stopPropagation($event)">{{ album.price }} on
           apple
           music</a>
       </div>

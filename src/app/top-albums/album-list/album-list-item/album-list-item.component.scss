@@ -1,18 +1,28 @@
 @import "/src/colors.scss";
 
-@mixin coverDimensions {
-  height: 200px;
-  width: 200px;
-}
+$pictureSize: 200px;
 
-.album-cover {
-  @include coverDimensions;
+@mixin coverDimensions($size) {
+  height: $size;
+  width: $size;
 }
 
 .album-cover-holder {
-  @include coverDimensions;
+  @include coverDimensions($pictureSize);
 
   background-image: url("/assets/img-placeholder.svg");
+  .album-cover {
+    @include coverDimensions($pictureSize);
+  }
+}
+
+.album-cover-holder-small {
+  @include coverDimensions($pictureSize/2);
+  margin-top: 15px;
+
+  .album-cover {
+    @include coverDimensions($pictureSize/2);
+  }
 }
 
 :host {
@@ -36,6 +46,7 @@
 }
 
 h3.album-name {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 

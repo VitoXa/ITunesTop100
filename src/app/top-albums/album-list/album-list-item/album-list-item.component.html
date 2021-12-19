@@ -10,13 +10,13 @@
   </div>
   <div class="uk-width-expand uk-padding-remove uk-card uk-card-default uk-grid uk-grid-collapse list-item-container"
     uk-grid>
-    <div class="uk-width-auto uk-flex uk-flex-column uk-flex-center">
+    <div class="uk-width-auto uk-flex uk-flex-column uk-flex-center uk-visible@s">
       <div class="album-cover-holder">
         <img class="album-cover" [src]="album.imgBigger.src" alt="albums cover">
       </div>
     </div>
     <div class=" uk-card uk-flex uk-flex-column uk-flex-between uk-width-expand  ">
-      <div class="uk-card-header no-borders  lesser-paddings">
+      <div class="uk-card-header no-borders lesser-paddings uk-text-left">
         <h3 class="uk-card-title album-name">{{album.name}}</h3>
         <h4 class="artist-name">{{ album.artist.label}}</h4>
       </div>

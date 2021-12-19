@@ -2,10 +2,9 @@
   <div class="loader" *ngIf="albums === null">
     <span uk-spinner="ratio: 3"></span>
   </div>
-  <ul *ngIf="albums" class="uk-grid-medium uk-column-1-2@l uk-child-width-1-2@l uk-grid" uk-grid
-    [@filterAnimation]="albums.length">
+  <ul *ngIf="albums" [@filterAnimation]="albums.length" class="albums-list uk-grid-small uk-child-width-1-2@l" uk-grid>
     <li *ngFor="let album of albums; trackBy: trackAlbum" class="list-item">
-      <app-album-list-item [album]="album" ></app-album-list-item>
+      <app-album-list-item [album]="album"></app-album-list-item>
     </li>
   </ul>
 </div>

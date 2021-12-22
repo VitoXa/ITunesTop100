@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1639936178918,
+  "timestamp": 1640185223685,
   "index": "/ITunesTop100/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/ITunesTop100/728.6a11d5f368d71cc9.js",
+        "/ITunesTop100/728.414c48c3604f410c.js",
         "/ITunesTop100/favicon.ico",
         "/ITunesTop100/index.html",
         "/ITunesTop100/main.717c68181cb838f6.js",
         "/ITunesTop100/manifest.webmanifest",
         "/ITunesTop100/polyfills.27669aca434a31c8.js",
-        "/ITunesTop100/runtime.7780c816c51b9f50.js",
+        "/ITunesTop100/runtime.671d0c60c050b832.js",
         "/ITunesTop100/scripts.bfb02253c5ecb4e6.js",
         "/ITunesTop100/styles.add479d875c018f4.css"
       ],
@@ -47,23 +47,23 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/ITunesTop100/728.6a11d5f368d71cc9.js": "e5ac60f62b0f70c12de33f1b16d541f7dcacb33b",
-    "/ITunesTop100/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/ITunesTop100/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/ITunesTop100/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/ITunesTop100/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/ITunesTop100/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/ITunesTop100/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/ITunesTop100/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/ITunesTop100/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/ITunesTop100/728.414c48c3604f410c.js": "e5ac60f62b0f70c12de33f1b16d541f7dcacb33b",
+    "/ITunesTop100/assets/icons/icon-128x128.png": "80bbf840bc7c6d4eb7a427da444f931a2ecf7144",
+    "/ITunesTop100/assets/icons/icon-144x144.png": "2753c16ec0946e7f3b40a3f5019ea6ef5b0588e8",
+    "/ITunesTop100/assets/icons/icon-152x152.png": "d4b748b7beeff233cad0ac9291517c4909e2049d",
+    "/ITunesTop100/assets/icons/icon-192x192.png": "e0cfe384d51472aae3dcc51348c6ee4a7c72d90a",
+    "/ITunesTop100/assets/icons/icon-384x384.png": "6493eb7903b3bce693b69332e7f701079217a1fc",
+    "/ITunesTop100/assets/icons/icon-512x512.png": "4223944fc3772d6cc9ee2dd2dc9a525d0079b232",
+    "/ITunesTop100/assets/icons/icon-72x72.png": "a7f0f564a3250771a2af743cc6f73a739af015e1",
+    "/ITunesTop100/assets/icons/icon-96x96.png": "e92615272c1e37a87f3154d30da8d3ecc4f023ba",
     "/ITunesTop100/assets/img-placeholder.svg": "cb9818bacc40a853c725de1223518f0ee557bb74",
     "/ITunesTop100/assets/logo.png": "0a71542de7cd34c5b675f64aee41869ac5a5d3c5",
     "/ITunesTop100/favicon.ico": "9ea7f338e76247a37bb84ec31de75b6b5ef6e9de",
-    "/ITunesTop100/index.html": "748a942707537bddbc6bd5d3a3365c59e4f2ce38",
+    "/ITunesTop100/index.html": "ae8f9c10e769b04b22f769184d91f1b5c144695b",
     "/ITunesTop100/main.717c68181cb838f6.js": "a4e098c368c42e5a099c5384d864a8b6f8977fac",
     "/ITunesTop100/manifest.webmanifest": "d5132d0e018d6a487836786737715ba3ff6c80cd",
     "/ITunesTop100/polyfills.27669aca434a31c8.js": "d6ec93833236765ea2d5fd8b02367a514610e7f3",
-    "/ITunesTop100/runtime.7780c816c51b9f50.js": "e7ac773d3e8e4742f294d6304fc9a156df614087",
+    "/ITunesTop100/runtime.671d0c60c050b832.js": "9bec6b8e634f5dc4d295ba24c93fbeec57a5c572",
     "/ITunesTop100/scripts.bfb02253c5ecb4e6.js": "5ee0d9b7a276e5dc7c104a806c0827f8fed8bea8",
     "/ITunesTop100/styles.add479d875c018f4.css": "434c9a26c51ffc5d64abbfe3233c4f2bb5323ede"
   },

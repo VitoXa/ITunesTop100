@@ -14,7 +14,6 @@ describe('StaticSearchableArrayDataSource', () => {
         matchExpression,
         cold('a', { a: '' })
       );
-
       // Act.Assert
       expectObservable(dataSource.connect()).toBe('i', { i: initialData });
     });
@@ -29,7 +28,6 @@ describe('StaticSearchableArrayDataSource', () => {
         matchExpression,
         cold('a-b', { a: '', b: 'ia' })
       );
-
       // Act/Assert
       expectObservable(dataSource.connect()).toBe('a-b', {
         a: initialData,
@@ -47,7 +45,6 @@ describe('StaticSearchableArrayDataSource', () => {
         matchExpression,
         cold('a-b', { a: '        ', b: '  ' })
       );
-
       // Act/Assert
       expectObservable(dataSource.connect()).toBe('a-b', {
         a: initialData,

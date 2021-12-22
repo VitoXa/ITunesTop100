@@ -3,8 +3,9 @@ import { Album } from './album.model';
 
 describe('mapToAlbum', () => {
   it('should parse Albums correctly', () => {
+    // Arrange/Act
     const parsedAlbum = mapToAlbum(mockResponseEntry, 0);
-
+    // Assert
     expect(parsedAlbum).toEqual(album);
   });
 });

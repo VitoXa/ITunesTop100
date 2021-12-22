@@ -73,10 +73,12 @@ describe('AlbumListItemComponent', () => {
   });
 
   it('should create', () => {
+    // Assert
     expect(component).toBeTruthy();
   });
 
   it('should render correctly', () => {
+    // Assert
     expect(pageObject.albumImg.getAttribute('src')).toEqual(
       album.imgBigger.src
     );
@@ -93,8 +95,9 @@ describe('AlbumListItemComponent', () => {
   });
 
   it('should open modal on click', () => {
+    // Arrange/Act
     pageObject.albumContainer.click();
-
+    // Assert
     expect(albumInfoModalServiceMock.showAlbumInfo).toHaveBeenCalledWith(album);
   });
 });

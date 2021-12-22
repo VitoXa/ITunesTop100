@@ -55,6 +55,7 @@ describe('AlbumInfoModalComponent', () => {
   });
 
   it('should create', () => {
+    // Assert
     expect(component).toBeTruthy();
   });
 });

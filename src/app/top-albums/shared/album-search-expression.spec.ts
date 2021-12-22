@@ -35,10 +35,6 @@ describe('albumSearchExpression', () => {
     expect(albumSearchExpression(album, 'Adele')).toBeTrue();
   });
 
-  it('should not match if artist name is incorrect', () => {
-    expect(albumSearchExpression(album, 'Not Adele')).toBeFalse();
-  });
-
   it('should check artist name case unsensitive and trimmed', () => {
     expect(albumSearchExpression(album, '  ade ')).toBeTrue();
   });
@@ -53,5 +49,9 @@ describe('albumSearchExpression', () => {
 
   it('should check album name no matter case', () => {
     expect(albumSearchExpression(album, '  stuff ')).toBeTrue();
+  });
+
+  it('should not match if artist name is incorrect', () => {
+    expect(albumSearchExpression(album, 'Not Adele')).toBeFalse();
   });
 });

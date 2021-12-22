@@ -35,10 +35,8 @@ describe('TopAlbumsService', () => {
   it('should return mapped Albums', async () => {
     // Arrange
     const albumsCount = 111;
-
     // Act
     const albums = await firstValueFrom(service.getTopAlbums(albumsCount));
-
     // Assert
     expect(httpClientMock.get).toHaveBeenCalledOnceWith(
       'https://itunes.apple.com/us/rss/topalbums/limit=111/json'

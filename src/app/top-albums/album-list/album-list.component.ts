@@ -16,6 +16,7 @@ import { Album } from '../shared/album.model';
 
   animations: [
     trigger('filterAnimation', [
+      // make first animation use stager
       transition(':enter, -1 => *', [
         query(
           ':enter',
@@ -32,7 +33,6 @@ import { Album } from '../shared/album.model';
           ':enter',
           [
             style({ opacity: 0 }),
-
             animate('300ms ease-out', style({ opacity: 1 })),
           ],
           { optional: true }

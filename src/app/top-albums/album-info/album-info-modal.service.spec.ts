@@ -25,12 +25,14 @@ describe('AlbumInfoModalServiceService', () => {
   });
 
   it('should be created', () => {
+    // Assert
     expect(service).toBeTruthy();
   });
 
   it('should open mat dialog on showAlbumInfo', () => {
+    // Arrange/Act
     service.showAlbumInfo(album);
-
+    // Assert
     expect(dialogService.open).toHaveBeenCalledWith(AlbumInfoModalComponent, {
       data: { album: album },
       panelClass: 'custom-dialog',
